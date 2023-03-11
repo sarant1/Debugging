@@ -1,0 +1,17 @@
+PROBLEM: When I have two targets in my target group.  Both targets are on the same ec2 instance, 
+and in containers using different ports.  When I try and open my nginx web server through browser
+I get a white screen and error.
+
+- On request I am getting status 200, but all I see is a white screen. 
+- When I have 1 target in my target group, either or, I have no issues
+- If I go to each port from using the Elastic IP, both ports work
+- Target groups shows both targets healthy
+
+error: main.7cce6711.js:1 Uncaught SyntaxError: Unexpected token '<'
+
+I have tried:
+
+clearing browser cache
+checking container logs seems ok.
+set up logging with the ALB and that seems ok too.  
+removing ssl cert to see if it is causing problem
